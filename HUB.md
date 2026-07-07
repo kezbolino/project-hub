@@ -5,7 +5,7 @@ in the browser, or Claude Code on my laptop — should read this FIRST to know
 what projects exist, where they live, and what's outstanding. This file is the
 source of truth; keep it updated.
 
-**Last updated:** 2026-07-04
+**Last updated:** 2026-07-07
 
 ---
 
@@ -25,6 +25,8 @@ source of truth; keep it updated.
 ### 1. Chuckling Wings — "Wingman" (social-media app)
 - **Repo:** `github.com/kezbolino/social-media-app` · branch `claude/new-session-wq4q6o`
 - **Live:** https://kezbolino.github.io/social-media-app/ (GitHub Pages)
+- **Local:** `~/Documents/Work/Street Food Post/` (folder + README call it "Street Food
+  Post"; same codebase as this repo. Not git-tracked locally.)
 - **What it is:** Offline PWA for a London street-food trader. Photo → Instagram-style
   editor (crop / filters / Stories-style text) → cheeky pre-written caption → share
   or auto-post. Plus a work calendar, post reminders, a 3-post generator, and a
@@ -37,11 +39,19 @@ source of truth; keep it updated.
   - Carousel (multi-photo) posts — idea.
 - **Key docs:** `README.md`, `docs/AUDIT.md`, `docs/META_SETUP.md`, `docs/PROJECT_LOG.md`
 
-### 2. Instagram scraper  ⟵ FILL THIS IN
-- **Repo:** _which repo is it in?_
-- **What it is:** _one line_
-- **Status:** _e.g. in progress / paused_
-- **Open threads:** _..._
+### 2. Instagram Caption Grabber (social media scraper)
+- **Repo:** lives in `github.com/kezbolino/social-media-app` under
+  `tools/ig-caption-scraper` (source of truth). No standalone repo.
+- **Local:** `~/Documents/Work/Instagram Caption Grabber/` (moved out of Downloads
+  2026-07-07; now standalone, not git-tracked locally).
+- **What it is:** Node tool that grabs captions from a list of Instagram handles
+  (`handles.txt`) → CSV, to feed into the Street Food Post caption bank. Runs via a
+  double-click Mac app (`Instagram Grabber.app` → browser UI) or CLI
+  (`IG_SESSIONID="<cookie>" node scrape.js handles.txt`). Needs Node.js + an IG
+  `sessionid` cookie.
+- **Status:** ✅ Working. Standalone tool, not deployed.
+- **Open threads:** Not git-tracked in its new home — consider `git init` or folding
+  back into the social-media-app repo so tweaks are versioned.
 
 ### 3. _next project_  ⟵ template — copy the block above
 - **Repo:**
