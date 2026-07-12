@@ -5,7 +5,7 @@ in the browser, or Claude Code on my laptop — should read this FIRST to know
 what projects exist, where they live, and what's outstanding. This file is the
 source of truth; keep it updated.
 
-**Last updated:** 2026-07-07
+**Last updated:** 2026-07-12
 
 ---
 
@@ -53,7 +53,29 @@ source of truth; keep it updated.
 - **Open threads:** Not git-tracked in its new home — consider `git init` or folding
   back into the social-media-app repo so tweaks are versioned.
 
-### 3. _next project_  ⟵ template — copy the block above
+### 3. Distill (YouTube → best-practices knowledge base)
+- **Repo:** `github.com/kezbolino/distill` (private) · branch `main`
+- **Local:** `~/Documents/Work/Distill/`
+- **What it is:** Local tool that turns hand-picked YouTubers into a private,
+  searchable knowledge base of *best practices*. Paste a channel/videos → fetch
+  transcripts → a model distils each into actionable notes → chat grounded only in
+  your curated content → export a consolidated `best-practices.md` per topic. Key
+  idea: the app-dev topic's export gets fed back to Claude as a reference when
+  building your own apps (the "distil → apply" loop). Node + TypeScript, runs on
+  `localhost:5170`, data is plain files under `data/`, git-backed for cross-machine.
+- **Status:** ✅ v1 core working & pushed. Add video → distil → chat → export all
+  verified end-to-end. **Model-agnostic**: everything routes through one
+  `LLMProvider` interface; a keyless `mock` provider runs the whole app today.
+- **Open threads / ideas** (from a Fable strategy pass):
+  - Wire a real model provider (Claude / local / OpenAI) — mock is placeholder only.
+  - Export topics as Claude **skill packs**, not just markdown (biggest-leverage feature).
+  - **Watch mode** — auto-ingest new uploads, merge into the doc with a diff.
+  - **Auto-discover similar channels** → review queue → grow the KB (the user's ask).
+  - Consensus/contested ledger; more sources (podcasts/blogs/PDFs).
+  - Monetisation: sell distilled "knowledge packs" (£19 on Gumroad), not SaaS.
+- **Key docs:** `README.md`
+
+### 4. _next project_  ⟵ template — copy the block above
 - **Repo:**
 - **What it is:**
 - **Status:**
