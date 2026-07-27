@@ -86,7 +86,9 @@ source of truth; keep it updated.
 - **Shape:** static **offline PWA like Wingman** (not a localhost tool like
   Distill). Phone-first. Built remotely via browser/phone — nothing may depend
   on a local dev setup.
-- **Status:** 🌱 Scoped, ontology drafted. **Nothing built.**
+- **Status:** 🚧 **v0.1 built and working** (2026-07-27). Core loop end to end:
+  log a class → auto-suggested tags → technique pages → dashboard count →
+  coverage prompt. Playwright smoke test green. **Not deployed.**
 - **MVP (`docs/MVP.md`):** dashboard (classes attended · this week's focus ·
   recent class themes) + class journal + tagging + technique pages +
   YouTube links + search. Annual wrapped demoted to nice-to-have.
@@ -95,20 +97,19 @@ source of truth; keep it updated.
   your half guard passing?" Reports imbalance rather than inferring skill, and
   collapses pentagon + knowledge gaps + recommendations into one engine.
   Needs **position × role** in the data model from day one.
-- **Open threads / decisions:**
-  - ⚠️ **BLOCKING — where does the data live?** A static PWA stores journals in
-    one device's browser. Cleared cache / lost phone / iOS eviction = years of
-    notes gone, and phone and desktop don't see each other. Must be settled
-    before the first schema. (`OPEN-QUESTIONS.md` §13)
-  - **Hosting:** repo is private, free Pages needs public. Either flip it public
+- **Open threads / next steps:**
+  - ⚠️ **Data is device-local.** Agreed answer is sync/backup to a *second,
+    private* GitHub data repo — **not built yet**. Export in Library is the only
+    safety net. Needs a data repo + a fine-grained token. (`OPEN-QUESTIONS.md` §13)
+  - **Deploy:** repo is private, free Pages needs public. Either flip it public
     (public *code* ≠ public *notes* — journals live in browser storage, not the
     repo) or host on Cloudflare/Netlify/Vercel free tier.
-  - Ontology draft needs kezbolino's review as an actual practitioner —
-    gi vs no-gi axis, tag granularity, missing positions.
-  - Auto-tagging accuracy gates the graph; manual tagging fine for v1.
-  - Capture friction is the whole product — voice capture deferred but is the
-    highest-value addition after v1.
-  - Reuse Distill's `LLMProvider` interface rather than reinventing it.
+  - Ontology (`docs/ONTOLOGY.md`) needs kezbolino's review as an actual
+    practitioner — gi/no-gi handling, tag granularity, missing positions.
+  - Gi/no-gi is captured per entry; a per-technique marker is still to do.
+  - Voice capture is the highest-value addition after v1 — capture friction is
+    the whole product.
+  - Reuse Distill's `LLMProvider` interface when tagging goes AI.
 - **Key docs:** `docs/MVP.md` (start here), `docs/ONTOLOGY.md`,
   `docs/VISION.md`, `docs/OPEN-QUESTIONS.md`, `CLAUDE.md`
 
