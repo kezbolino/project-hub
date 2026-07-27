@@ -5,7 +5,7 @@ in the browser, or Claude Code on my laptop — should read this FIRST to know
 what projects exist, where they live, and what's outstanding. This file is the
 source of truth; keep it updated.
 
-**Last updated:** 2026-07-12
+**Last updated:** 2026-07-27
 
 ---
 
@@ -75,7 +75,34 @@ source of truth; keep it updated.
   - Monetisation: sell distilled "knowledge packs" (£19 on Gumroad), not SaaS.
 - **Key docs:** `README.md`
 
-### 4. _next project_  ⟵ template — copy the block above
+### 4. BJJ Brain (jiu-jitsu knowledge system)
+- **Repo:** `github.com/kezbolino/JJ-app` (private) · branch `main`
+  ⚠️ Repo is named `JJ-app`, product is **BJJ Brain** — rename to `bjj-brain`
+  recommended while it's still free to do (no code, no deploys, no links).
+- **What it is:** A personal knowledge system for grapplers — "Obsidian for
+  knowledge, Spotify Wrapped for progress, a coach that never forgets." Journal
+  every class → auto-tag → everything connects into a knowledge graph. Layers on
+  top: technique wiki pages, YouTube library, voice capture, coach principles,
+  radar charts (confidence vs evidence), AI insights, knowledge-gap detection,
+  monthly review and an annual "wrapped".
+- **Status:** 🌱 Vision captured, **nothing built**. No stack chosen.
+- **Open threads / decisions:**
+  - The "MVP" is a multi-year roadmap — needs a real first slice (likely
+    journal + notes + voice capture + search).
+  - Cold start: nearly every good feature needs months of data before it shows
+    anything. What makes it worth opening in week one?
+  - Capture friction is the whole product — voice capture is the core loop,
+    not feature #6.
+  - Auto-tagging accuracy gates the entire graph; probably needs a canonical
+    BJJ ontology first.
+  - "Evidence" radar measures attention, not competence — no skill signal
+    exists in the data model yet.
+  - Standalone app vs Obsidian vault + plugins — unanswered.
+  - Private repo vs mobile-first: no deployment path (Pages needs public).
+  - Reuse Distill's `LLMProvider` interface rather than reinventing it.
+- **Key docs:** `docs/VISION.md`, `docs/OPEN-QUESTIONS.md`, `CLAUDE.md`
+
+### 5. _next project_  ⟵ template — copy the block above
 - **Repo:**
 - **What it is:**
 - **Status:**
