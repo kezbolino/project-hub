@@ -85,22 +85,28 @@ source of truth; keep it updated.
   top: technique wiki pages, YouTube library, voice capture, coach principles,
   radar charts (confidence vs evidence), AI insights, knowledge-gap detection,
   monthly review and an annual "wrapped".
-- **Status:** 🌱 Vision captured, **nothing built**. No stack chosen.
+- **Status:** 🌱 Vision captured and **MVP scoped**. Nothing built, no stack chosen.
+- **MVP (`docs/MVP.md`):** dashboard (classes attended · this week's focus ·
+  what we're learning in class) + class journal + tagging + technique pages +
+  YouTube links + search. Annual wrapped demoted to nice-to-have.
+- **Key insight:** the "Evidence" radar was reframed from *competence* to
+  **coverage asymmetry** — "you've written a lot about half guard sweeps, how's
+  your half guard passing?" Reports imbalance rather than inferring skill, and
+  collapses pentagon + knowledge gaps + recommendations into one engine.
+  Needs **position × role** in the data model from day one.
 - **Open threads / decisions:**
-  - The "MVP" is a multi-year roadmap — needs a real first slice (likely
-    journal + notes + voice capture + search).
-  - Cold start: nearly every good feature needs months of data before it shows
-    anything. What makes it worth opening in week one?
-  - Capture friction is the whole product — voice capture is the core loop,
-    not feature #6.
-  - Auto-tagging accuracy gates the entire graph; probably needs a canonical
-    BJJ ontology first.
-  - "Evidence" radar measures attention, not competence — no skill signal
-    exists in the data model yet.
+  - Where does "what we're learning in class" data come from? (Does the gym
+    publish a syllabus/theme anywhere?) Decides if that panel is great or
+    marginal.
   - Standalone app vs Obsidian vault + plugins — unanswered.
+  - Personal tool vs product — one user today, doc written in product language.
   - Private repo vs mobile-first: no deployment path (Pages needs public).
+  - Auto-tagging accuracy gates the graph; manual tagging fine for v1.
+  - Capture friction is the whole product — voice capture deferred but is the
+    highest-value addition after v1.
   - Reuse Distill's `LLMProvider` interface rather than reinventing it.
-- **Key docs:** `docs/VISION.md`, `docs/OPEN-QUESTIONS.md`, `CLAUDE.md`
+- **Key docs:** `docs/MVP.md` (start here), `docs/VISION.md`,
+  `docs/OPEN-QUESTIONS.md`, `CLAUDE.md`
 
 ### 5. _next project_  ⟵ template — copy the block above
 - **Repo:**
