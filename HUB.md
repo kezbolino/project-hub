@@ -75,19 +75,20 @@ source of truth; keep it updated.
   - Monetisation: sell distilled "knowledge packs" (£19 on Gumroad), not SaaS.
 - **Key docs:** `README.md`
 
-### 4. BJJ Brain (jiu-jitsu knowledge system)
+### 4. JJ-app (jiu-jitsu knowledge system)
 - **Repo:** `github.com/kezbolino/JJ-app` (private) · branch `main`
-  ⚠️ Repo is named `JJ-app`, product is **BJJ Brain** — rename to `bjj-brain`
-  recommended while it's still free to do (no code, no deploys, no links).
-- **What it is:** A personal knowledge system for grapplers — "Obsidian for
-  knowledge, Spotify Wrapped for progress, a coach that never forgets." Journal
-  every class → auto-tag → everything connects into a knowledge graph. Layers on
-  top: technique wiki pages, YouTube library, voice capture, coach principles,
-  radar charts (confidence vs evidence), AI insights, knowledge-gap detection,
-  monthly review and an annual "wrapped".
-- **Status:** 🌱 Vision captured and **MVP scoped**. Nothing built, no stack chosen.
+  Name is **JJ-app**. "BJJ Brain" is a working title on the vision doc only —
+  no rename (user's call).
+- **What it is:** A personal knowledge system for grapplers — journal every
+  class → tag it → everything connects into a knowledge graph of technique
+  pages, YouTube links, coach principles and personal notes. Long-term: coverage
+  insights, monthly review, an annual "wrapped".
+- **Shape:** static **offline PWA like Wingman** (not a localhost tool like
+  Distill). Phone-first. Built remotely via browser/phone — nothing may depend
+  on a local dev setup.
+- **Status:** 🌱 Scoped, ontology drafted. **Nothing built.**
 - **MVP (`docs/MVP.md`):** dashboard (classes attended · this week's focus ·
-  what we're learning in class) + class journal + tagging + technique pages +
+  recent class themes) + class journal + tagging + technique pages +
   YouTube links + search. Annual wrapped demoted to nice-to-have.
 - **Key insight:** the "Evidence" radar was reframed from *competence* to
   **coverage asymmetry** — "you've written a lot about half guard sweeps, how's
@@ -95,18 +96,21 @@ source of truth; keep it updated.
   collapses pentagon + knowledge gaps + recommendations into one engine.
   Needs **position × role** in the data model from day one.
 - **Open threads / decisions:**
-  - Where does "what we're learning in class" data come from? (Does the gym
-    publish a syllabus/theme anywhere?) Decides if that panel is great or
-    marginal.
-  - Standalone app vs Obsidian vault + plugins — unanswered.
-  - Personal tool vs product — one user today, doc written in product language.
-  - Private repo vs mobile-first: no deployment path (Pages needs public).
+  - ⚠️ **BLOCKING — where does the data live?** A static PWA stores journals in
+    one device's browser. Cleared cache / lost phone / iOS eviction = years of
+    notes gone, and phone and desktop don't see each other. Must be settled
+    before the first schema. (`OPEN-QUESTIONS.md` §13)
+  - **Hosting:** repo is private, free Pages needs public. Either flip it public
+    (public *code* ≠ public *notes* — journals live in browser storage, not the
+    repo) or host on Cloudflare/Netlify/Vercel free tier.
+  - Ontology draft needs kezbolino's review as an actual practitioner —
+    gi vs no-gi axis, tag granularity, missing positions.
   - Auto-tagging accuracy gates the graph; manual tagging fine for v1.
   - Capture friction is the whole product — voice capture deferred but is the
     highest-value addition after v1.
   - Reuse Distill's `LLMProvider` interface rather than reinventing it.
-- **Key docs:** `docs/MVP.md` (start here), `docs/VISION.md`,
-  `docs/OPEN-QUESTIONS.md`, `CLAUDE.md`
+- **Key docs:** `docs/MVP.md` (start here), `docs/ONTOLOGY.md`,
+  `docs/VISION.md`, `docs/OPEN-QUESTIONS.md`, `CLAUDE.md`
 
 ### 5. _next project_  ⟵ template — copy the block above
 - **Repo:**
