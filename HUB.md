@@ -89,10 +89,11 @@ source of truth; keep it updated.
 - **Shape:** static **offline PWA like Wingman** (not a localhost tool like
   Distill). Phone-first. Built remotely via browser/phone — nothing may depend
   on a local dev setup.
-- **Status:** ✅ **v0.2 deployed** (2026-07-28). Core loop end to end: log a
+- **Status:** ✅ **v0.3 deployed** (2026-07-28). Core loop end to end: log a
   class → auto-suggested tags → technique pages → dashboard count → coverage
   prompt. Markdown backup/sync to the private notes repo is set up and running.
-  25 tests green (markdown round-trip, app smoke, multi-device sync).
+  43 tests green (markdown round-trip, tagger + corrections, app smoke,
+  multi-device sync).
 - **Notes storage:** local IndexedDB is the source of truth; mirrored to a
   **separate private repo** as one `.md` per entry (foldered by type, generated
   index, one commit per sync, tombstoned deletions). Readable on github.com and
@@ -111,8 +112,11 @@ source of truth; keep it updated.
     tapping gets annoying.
   - Conflict handling is last-write-wins per entry; two devices editing the
     *same* note offline will lose one side. Fine for one user, revisit if it bites.
-  - Ontology (`docs/ONTOLOGY.md`) needs kezbolino's review as an actual
-    practitioner — gi/no-gi handling, tag granularity, missing positions.
+  - **Ontology is now correctable in-app** (2026-07-28): ⊘ mutes a wrong
+    suggestion, "Teach a word" maps your gym's vocabulary onto a technique.
+    Corrections sync and are undoable in Settings. So no need to hand-edit
+    `docs/ONTOLOGY.md` for *vocabulary* — only for **structural** gaps
+    (missing positions, gi/no-gi as an axis), which need a code change too.
   - Gi/no-gi is captured per entry; a per-technique marker is still to do.
   - Voice capture is the highest-value addition after v1 — capture friction is
     the whole product.
