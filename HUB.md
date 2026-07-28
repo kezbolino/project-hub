@@ -87,8 +87,8 @@ source of truth; keep it updated.
   pages, YouTube links, coach principles and personal notes. Long-term: coverage
   insights, monthly review, an annual "wrapped".
 - **Shape:** static **offline PWA like Wingman** (not a localhost tool like
-  Distill). Phone-first. Built remotely via browser/phone — nothing may depend
-  on a local dev setup.
+  Distill). Phone-first, and the phone is **Android/Chrome** — don't assume iOS.
+  Built remotely via browser/phone — nothing may depend on a local dev setup.
 - **Status:** ✅ **v0.4 deployed** (2026-07-28). Core loop end to end: log a
   class → auto-suggested tags → technique pages → dashboard count → coverage
   prompt. Markdown backup/sync to the private notes repo is set up and running.
@@ -121,8 +121,12 @@ source of truth; keep it updated.
   - No `coach` field — removed 2026-07-28 at kezbolino's request (didn't want
     the teacher's name recorded). Old values remain in the notes repo's git
     history only. Don't reintroduce it unasked.
-  - Voice capture is the highest-value addition after v1 — capture friction is
-    the whole product.
+  - **Voice capture — parked 2026-07-28, design done, no code.** Still the
+    highest-value addition after v1 (capture friction is the whole product).
+    Full write-up in `docs/OPEN-QUESTIONS.md` §14: Web Speech API, save the raw
+    transcript and let the existing tagger handle it, no LLM. Truly hands-free
+    needs an Android automation writing markdown into `jj-app-data`, not an
+    app feature.
   - Reuse Distill's `LLMProvider` interface when tagging goes AI.
 - **Key docs:** `docs/MVP.md` (start here), `docs/ONTOLOGY.md`,
   `docs/VISION.md`, `docs/OPEN-QUESTIONS.md`, `CLAUDE.md`
