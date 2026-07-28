@@ -89,10 +89,10 @@ source of truth; keep it updated.
 - **Shape:** static **offline PWA like Wingman** (not a localhost tool like
   Distill). Phone-first. Built remotely via browser/phone — nothing may depend
   on a local dev setup.
-- **Status:** ✅ **v0.3 deployed** (2026-07-28). Core loop end to end: log a
+- **Status:** ✅ **v0.4 deployed** (2026-07-28). Core loop end to end: log a
   class → auto-suggested tags → technique pages → dashboard count → coverage
   prompt. Markdown backup/sync to the private notes repo is set up and running.
-  43 tests green (markdown round-trip, tagger + corrections, app smoke,
+  41 tests green (markdown round-trip, tagger + corrections, app smoke,
   multi-device sync).
 - **Notes storage:** local IndexedDB is the source of truth; mirrored to a
   **separate private repo** as one `.md` per entry (foldered by type, generated
@@ -118,6 +118,9 @@ source of truth; keep it updated.
     `docs/ONTOLOGY.md` for *vocabulary* — only for **structural** gaps
     (missing positions, gi/no-gi as an axis), which need a code change too.
   - Gi/no-gi is captured per entry; a per-technique marker is still to do.
+  - No `coach` field — removed 2026-07-28 at kezbolino's request (didn't want
+    the teacher's name recorded). Old values remain in the notes repo's git
+    history only. Don't reintroduce it unasked.
   - Voice capture is the highest-value addition after v1 — capture friction is
     the whole product.
   - Reuse Distill's `LLMProvider` interface when tagging goes AI.
