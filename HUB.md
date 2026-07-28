@@ -5,7 +5,7 @@ in the browser, or Claude Code on my laptop — should read this FIRST to know
 what projects exist, where they live, and what's outstanding. This file is the
 source of truth; keep it updated.
 
-**Last updated:** 2026-07-12
+**Last updated:** 2026-07-28
 
 ---
 
@@ -87,3 +87,11 @@ source of truth; keep it updated.
 
 - Anything that spans projects (shared accounts, a decision that affects several
   things, "don't forget X") goes here.
+- **Research notes live in `docs/research/`.** Index:
+  - `mobbin-grounded-design.md` (2026-07-28) — analysis of the Mobbin MCP video.
+    Touches all three projects. Core idea: agents produce generic output because
+    they lack a grounded corpus, not capability; fix it by splitting research and
+    build into separate sessions with a cited artifact between them. Biggest
+    implication: **Distill is the same architecture as Mobbin MCP**, so the video
+    doubles as a gap list for it (citations w/ timestamps → skill-pack export →
+    consensus ledger).
