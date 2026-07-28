@@ -5,7 +5,7 @@ in the browser, or Claude Code on my laptop — should read this FIRST to know
 what projects exist, where they live, and what's outstanding. This file is the
 source of truth; keep it updated.
 
-**Last updated:** 2026-07-27
+**Last updated:** 2026-07-28
 
 ---
 
@@ -76,9 +76,12 @@ source of truth; keep it updated.
 - **Key docs:** `README.md`
 
 ### 4. JJ-app (jiu-jitsu knowledge system)
-- **Repo:** `github.com/kezbolino/JJ-app` (private → going public) · branch `main`
+- **Repo:** `github.com/kezbolino/JJ-app` (public) · branch `main`
   Name is **JJ-app**. "BJJ Brain" is a working title on the vision doc only —
   no rename (user's call).
+- **Live:** https://kezbolino.github.io/JJ-app/ (GitHub Pages, enabled 2026-07-28)
+- **Notes repo:** `github.com/kezbolino/jj-app-data` (**private**) — markdown
+  backup of the journal. Not the code. Never add a token to either repo.
 - **What it is:** A personal knowledge system for grapplers — journal every
   class → tag it → everything connects into a knowledge graph of technique
   pages, YouTube links, coach principles and personal notes. Long-term: coverage
@@ -86,10 +89,10 @@ source of truth; keep it updated.
 - **Shape:** static **offline PWA like Wingman** (not a localhost tool like
   Distill). Phone-first. Built remotely via browser/phone — nothing may depend
   on a local dev setup.
-- **Status:** 🚧 **v0.2 built and working** (2026-07-27). Core loop end to end:
-  log a class → auto-suggested tags → technique pages → dashboard count →
-  coverage prompt. Plus markdown backup/sync to a private notes repo. 25 tests
-  green (markdown round-trip, app smoke, multi-device sync). **Not deployed.**
+- **Status:** ✅ **v0.2 deployed** (2026-07-28). Core loop end to end: log a
+  class → auto-suggested tags → technique pages → dashboard count → coverage
+  prompt. Markdown backup/sync to the private notes repo is set up and running.
+  25 tests green (markdown round-trip, app smoke, multi-device sync).
 - **Notes storage:** local IndexedDB is the source of truth; mirrored to a
   **separate private repo** as one `.md` per entry (foldered by type, generated
   index, one commit per sync, tombstoned deletions). Readable on github.com and
@@ -102,14 +105,12 @@ source of truth; keep it updated.
   your half guard passing?" Reports imbalance rather than inferring skill, and
   collapses pentagon + knowledge gaps + recommendations into one engine.
   Needs **position × role** in the data model from day one.
-- **Waiting on kezbolino (2 manual GitHub steps):**
-  1. **Create the private notes repo** (e.g. `jj-app-data`, empty) + a
-     fine-grained token scoped to it with Contents: read/write. Nothing syncs
-     until this exists. Token goes in the app's Settings screen, not a repo.
-  2. **Flip `JJ-app` to public** so free Pages can serve it — decided, but repo
-     visibility can't be changed from a Claude session. Public *code* ≠ public
-     *notes*: journals live in the browser and the private notes repo.
 - **Open threads / next steps:**
+  - **Sync is manual** — you tap "Sync now". Deliberate for v1 (no surprise
+    network calls, nothing overwritten unseen). Sync-on-save is easy to add if
+    tapping gets annoying.
+  - Conflict handling is last-write-wins per entry; two devices editing the
+    *same* note offline will lose one side. Fine for one user, revisit if it bites.
   - Ontology (`docs/ONTOLOGY.md`) needs kezbolino's review as an actual
     practitioner — gi/no-gi handling, tag granularity, missing positions.
   - Gi/no-gi is captured per entry; a per-technique marker is still to do.
